@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>{% block title %}{% endblock title%}|Software Developer&copy;</title>
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static 'Mandy/style.css' %}" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Tangerine">
+		<link rel="icon" href="{% static 'Mandy/logo1.png' %}" type="image/gif">
+		{% block style %}{% endblock style %}
+		<script language="javascript" type="text/javascript">
+			function myFunction() {
+	  		var x = document.getElementById("mylinks");
+	  		if (x.style.display == "grid") {
+	    	x.style.display = "none";
+	  		} 
+	  		else{
+	    	x.style.display = "grid";
+	  		}
+			}
+		</script>
+	</head>
+	<body >
+		<nav>
+			<div id="fg"><a href="\" id="a-logo">{% load static %}<img id="logo" src="{% static 'Mandy/logo1.png' %}" alt="logo"></a>
+			<label id="label1">RealTech</label></div>
+			<ul class="nav_ul">
+				<a class='f d'href="\"><li>Home</li></a>
+				<a class='f d'href="\services"><li>Services</li></a>
+				<a class='f d'href="\blog"><li>Blogs</li></a>
+				<a class='d g' href="\contact"><li>Contact us</li></a>
+				<a class='d g' href="#"><li>Search</li></a>
+				<input type="text" name="search" class="g" id="search" placeholder="Search this website">	
+			</ul>
+			<div id="mylinks">
+				<a href="\">Home</a>
+				<a href="\services">Services</a>
+				<a href="\blog">Blogs</a>
+				<a href="\contact">Contact</a>
+				<input type="text" name="search" class="g ham-search" id="search" placeholder="Search this website"><a href="#">Search</a>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()" id="icon"><i class="fa fa-bars"></i></a>
+		</nav>
+		{% block body %}{% endblock body%}
+		<footer id="footer" class="" style="position: absolute;left: 0px;width: 100%;">
+			<div class="">
+	  			<p class="" style="font-size: 22px;color: green; text-align: center;">Quick View</p>
+			</div>					
+			<div class="" style="display: flex;flex-wrap: wrap; justify-content: space-between;">
+				<div>
+					<ul>
+						<li><strong>Expertise</strong></li>
+	 					<li> <a class="flinks">Web Development</a> </li>
+	 					<li> <a class="flinks">Mobile App Development</a> </li>
+	 					<li> <a class="flinks">Big Data </a> </li>
+	  					<li> <a class="flinks">Software Development</a> </li>
+					</ul>
+				</div>
+				<!-- <div>
+					<ul>
+						<li><strong>Our Products</strong></li>
+						<li> <a class="flinks"href="#" target="_blank">Amazon</a> </li>
+						<li> <a class="flinks"href="#" target="_blank">Mobile VLC</a> </li>
+					</ul>
+				</div> -->
+				<div>
+					<ul>
+						<li><strong>Discover</strong></li>
+						<li> <a class="flinks"href="/about">About Us  </a></li>
+						<li> <a class="flinks"> Why Us </a></li>
+						<li> <a class="flinks"> Mission </a></li>
+						<li> <a class="flinks">Vision </a></li>
+						<li> <a class="flinks">Careers </a></li>
+					</ul>
+				</div>
+				<div>
+					<ul>
+						<li><strong>Connect with us</strong></li>
+						<li>
+	  						<ul class="social_links">
+	             				<li><a href="https://www.facebook.com/profile.php?id=100067543698609" target="_blank">
+	               				{% load static %}<img id='fb' src="{% static 'Mandy\fb.png' %}" height="20px" width="20px" alt="fb" title="facebook"></a></li>
+	               				<li><a href="https://twitter.com/SanjuKu58418890" target="_blank">{% load static %}<img src="{% static 'Mandy\tw.png' %}" height="20px" width="20px" alt="Twitter" title="Twitter"></a></li>
+	               				<li><a href="https://www.linkedin.com/in/sanju-kumar-bb4015210/" target="_blank">
+	               				{% load static %}<img src="{% static 'Mandy\ln.png' %}" height="20px" width="20px" alt="linkedin" title="linkedin"></a></li>
+			               		<li><a href="https://www.instagram.com/sa.njukumar" target="_blank">
+		                  		{% load static %}<img src="{% static 'Mandy\insta.png' %}" height="20px"width="20px" alt="insta" title="instagram"></a></li>
+		           			</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div>
+	  			<p>Copyright © 2021 RealTech Software developer</p>
+			</div>
+		</footer>
+	</body>
+</html>

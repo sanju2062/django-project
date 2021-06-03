@@ -1,0 +1,113 @@
+{%extends 'base.html' %}
+
+{% block title %}Contact Us{% endblock title%}
+
+{% block style %}
+<style type="text/css">
+	#contact_form{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+	.input{
+		border-radius: 5px;
+		height: 15px;
+		width: 230px;
+		/*flex-basis: 200px;*/
+	}
+	.form_id{
+		margin-top: 50px;
+	}
+	.label2{
+		width: 110px;
+		font-size: 22px;
+		color: #0000bb;
+		margin-left: 50px;
+		margin-right: 20px;
+	}
+	.ne{
+		margin-left: 200px;
+	}
+	.submit{
+		height: 30px;
+		width: 70px;
+		border-radius: 4px;
+		background-color: #7fdeb1;
+		grid-column:1/span 4;
+		margin:0px auto;
+	}
+	@media(min-width: 750px) and (max-width: 1000px){
+		.label2{
+			margin-left: 25px;
+			margin-right: 0px;
+		}
+		.ne{
+			margin-left: 150px;
+		}
+		.input{
+			width: 200px;
+		}
+	}
+	@media(min-width: 400px) and (max-width: 750px){
+		#contact_form{
+			grid-template-columns: 1fr 1fr;
+		}
+		.label2{
+			margin-left: 150px;
+		}
+		.input{
+			width: 150px;
+		}
+		.submit{
+			grid-column: 1/span 2;
+		}
+	}
+	@media(max-width: 400px){
+		#contact_form{
+			grid-template-columns: 1fr;
+		}
+		.label2{
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.input{
+			margin-right: auto;
+			margin-left: auto;
+		}
+		.submit{
+			grid-column: 1/span 1;
+		}
+	}
+</style>
+{% endblock style %}
+
+{% block body %}
+	<form id="contact_form" action="/contact/" method="POST">
+		{% csrf_token %}
+		<label class ='form_id label2 ne' for="name">Name:</label>
+		<input class ='form_id input' type="text" name="name" id="name">
+		<label class ='form_id label2' for="contact">Contact No.</label>
+		<input class ='form_id input' type="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" name="contact" id="contact">
+		<label class ='form_id label2 ne' for="email">Email:</label>
+		<input class ='form_id input' type="email" name="email" id="email">
+		<label class ='form_id label2' for="company">Company</label>
+		<input class ='form_id input' type="text" name="company" id="company">
+		<input class ='form_id submit' type="submit" name="submit">
+	</form>
+	<div style="display: flex;justify-content: space-between; flex-wrap: wrap;">
+		<div>
+			<p style="font-size: 28px; color: #ffae18;">
+				Contact Us:
+			</p>
+			<p style=" color: #88ff88;font-family: 'Tangerine', serif;font-size: 30px;text-shadow: 4px 4px 4px #aaa;">	
+				Sanju Kumar<br>
+				Banda singh bahadur hostel,<br>
+				Punjabi University,Patiala<br>
+				India,+918753000021	<br>
+				sk79997@gmail.com
+			</p>
+		</div>
+		<div>
+			{% load static %}<img src="{% static 'Mandy\contact.jpeg' %}" height="230px" width="270px" alt="contact"title="contact us">
+		</div>
+	</div>
+{% endblock body%}

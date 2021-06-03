@@ -1,0 +1,19 @@
+{%extends 'base.html' %}
+
+{% block title %}Services{% endblock title%}
+
+{% block style %}
+<style type="text/css">
+
+}</style>
+{% endblock style %}
+
+{% block body %}
+	<div style="display: flex; justify-content: space-around; margin-top: 70px; flex-wrap: wrap;" >
+		{% load static %}<img src="{% static 'Mandy\3.jpg' %}" height="300px" width="400px" alt="pic" style="flex-shrink: 1"><br>
+	<ul style="font-size: 30px; color: #0000ff">
+		<li>Mobile App development</li><br>
+		<li>Web Development</li><br>
+		<li>Software Development</li><br>
+	</ul></div>
+{% endblock body%}
