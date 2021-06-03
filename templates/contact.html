@@ -81,7 +81,7 @@
 {% endblock style %}
 
 {% block body %}
-	<form id="contact_form" action="/contact/" method="POST">
+	<form id="contact_form" method="POST">
 		{% csrf_token %}
 		<label class ='form_id label2 ne' for="name">Name:</label>
 		<input class ='form_id input' type="text" name="name" id="name">
