@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: samplefirstdjangoproject.herokuapp.com
+Token: 5b1b7c1948a1d1cef7aa2cf57e536f669f473a7bc9d1f52898c2d563b71e57ca

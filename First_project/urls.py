@@ -36,5 +36,6 @@ urlpatterns = [
     path('blog/',views2.PostList.as_view(),name="blog"),
     # path('', include('blog.urls')),
     path('blog/<slug:slug>/', views2.PostDetail.as_view(), name='post_detail'),
+    path('.well-known/brave-rewards-verification.txt', TemplateView.as_view(template_name="brave-rewards-verification.txt", content_type="text/plain"),)
 ]
 
