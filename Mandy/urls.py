@@ -25,4 +25,4 @@ urlpatterns = [
     # path('blog/',views.blog,name="blog"),
 ]
 
-urlpatterns += staticfiles_urlpatterns()
+# urlpatterns += staticfiles_urlpatterns()
